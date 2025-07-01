@@ -1,1 +1,466 @@
-# chefluisapellegrini.com
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pães Artesanais Sem Glúten - O Método Definitivo por Luisa Pellegrini</title>
+    <meta name="description" content="Descubra o método passo a passo para fazer pães sem glúten deliciosos, com casca crocante e miolo macio. O e-book de Luisa Pellegrini que vai transformar sua cozinha.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --cor-principal: #8B4513; /* Marrom Rústico */
+            --cor-secundaria: #D2691E; /* Chocolate */
+            --cor-texto: #4A443F;
+            --cor-fundo: #FDF8F0;
+            --cor-fundo-claro: #FFFFFF;
+            --cor-cta: #28a745; /* Verde Sucesso */
+            --cor-cta-hover: #218838;
+            --cor-oferta: #d32f2f; /* Vermelho Urgência */
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.7;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        
+        /* === ESTILOS DO CABEÇALHO === */
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.60);
+            z-index: 1;
+        }
+        .hero .container { position: relative; z-index: 2; }
+        .promo-badge {
+            display: inline-block;
+            background-color: var(--cor-oferta);
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8em;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+        }
+        .hero h1 span {
+            color: #FFD700; /* Dourado */
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #f0f0f0;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(180deg, var(--cor-cta) 0%, var(--cor-cta-hover) 100%);
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4em;
+            font-weight: 800;
+            text-decoration: none;
+            padding: 20px 45px;
+            border-radius: 8px;
+            text-transform: uppercase;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.5);
+        }
+        .cta-subtext {
+            font-size: 0.8em;
+            margin-top: 10px;
+            display: block;
+        }
+
+        section { padding: 60px 0; }
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5em;
+            font-weight: 800;
+            color: var(--cor-principal);
+            margin-bottom: 20px;
+            text-align: center;
+            line-height: 1.3;
+        }
+        .section-subtitle { max-width: 650px; margin: -10px auto 40px auto; text-align: center; font-size: 1.1em; }
+
+        /* SEÇÃO DOR (PROBLEMA) */
+        .pain-points { list-style: none; padding: 0; max-width: 600px; margin: 30px auto; }
+        .pain-points li { background: #fff5e6; border-left: 4px solid var(--cor-oferta); margin-bottom: 15px; padding: 15px 20px; font-size: 1.1em; border-radius: 0 8px 8px 0; display: flex; align-items: center; gap: 15px; }
+        .pain-points li::before { content: '❌'; font-size: 1.5em; }
+
+        /* SEÇÃO IMAGINE (PRAZER) */
+        #imagine { background: linear-gradient(180deg, var(--cor-fundo-claro) 0%, var(--cor-fundo) 100%); }
+        .imagine-list { list-style: none; padding: 0; max-width: 600px; margin: 30px auto; }
+        .imagine-list li { padding-left: 40px; position: relative; margin-bottom: 15px; font-size: 1.1em; }
+        .imagine-list li::before { content: '✅'; color: var(--cor-cta); position: absolute; left: 0; top: 0; font-size: 1.5em; }
+        .center-button { text-align: center; margin-top: 40px; }
+
+        /* SEÇÃO O QUE VOCÊ VAI ENCONTRAR */
+        #solution { background-color: var(--cor-fundo-claro); }
+        .solution-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 40px; }
+        .solution-card { padding: 25px; border-radius: 8px; text-align: center; background: var(--cor-fundo); border-top: 4px solid var(--cor-principal); }
+        .solution-card-icon { font-size: 3em; color: var(--cor-secundaria); }
+        .solution-card h3 { font-family: 'Montserrat'; font-size: 1.2em; margin: 10px 0; color: var(--cor-principal); }
+        
+        /* GALERIA DE FOTOS */
+        .photo-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+        .photo-gallery img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; border: 3px solid white; }
+        .photo-gallery img:hover { transform: scale(1.05); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+        
+        /* DEPOIMENTOS */
+        .testimonial { background-color: var(--cor-fundo-claro); border-left: 5px solid var(--cor-principal); padding: 25px; margin: 20px auto; text-align: left; border-radius: 0 8px 8px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 20px; max-width: 700px; }
+        .testimonial-profile { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 3px solid var(--cor-principal); }
+        .testimonial-content p { font-style: italic; margin-bottom: 10px; font-size: 1.05em; }
+        .testimonial-content strong { color: var(--cor-texto); font-weight: bold; }
+
+        /* AUTORA */
+        #author-section { background-color: var(--cor-fundo-claro); padding: 40px 20px; border-radius: 8px; display: flex; align-items: center; gap: 30px; }
+        .author-image { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; flex-shrink: 0; box-shadow: 0 0 0 5px white, 0 0 0 8px var(--cor-principal); }
+        #author-section .author-text { text-align: left; }
+        #author-section h2 { text-align: left; margin-bottom: 10px; }
+        
+        /* SEÇÃO VALUE STACK (O QUE VOCÊ LEVA) */
+        .value-stack { background-color: var(--cor-fundo-claro); padding: 40px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.07); }
+        .main-product, .bonus-item { display: flex; align-items: center; gap: 25px; margin-bottom: 25px; }
+        .main-product img, .bonus-item img { width: 120px; flex-shrink: 0; }
+        .main-product h3, .bonus-item h3 { font-family: 'Montserrat'; font-size: 1.3em; color: var(--cor-principal); margin: 0 0 5px 0; }
+        .bonus-badge { display: inline-block; background-color: var(--cor-oferta); color: #fff; padding: 3px 10px; border-radius: 5px; font-size: 0.8em; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; }
+
+        /* GARANTIA */
+        #guarantee-section { background-color: #e8f5e9; padding: 40px; border-radius: 8px; display: flex; align-items: center; gap: 30px; border: 2px dashed var(--cor-cta); }
+        .guarantee-seal { width: 150px; height: 150px; flex-shrink: 0; }
+        .guarantee-text h3 { font-family: 'Montserrat'; font-size: 1.8em; font-weight: bold; color: #1b5e20; margin: 0 0 10px 0; }
+        .guarantee-text p { margin: 0; font-size: 1.1em; }
+        .guarantee-text p strong { color: #1b5e20; }
+        
+        /* OFERTA FINAL */
+        #oferta { text-align: center; background-color: var(--cor-fundo-claro); padding: 50px 20px; border: 3px solid var(--cor-principal); border-radius: 12px; box-shadow: 0 0 30px rgba(0,0,0,0.1); }
+        #oferta .section-title { color: var(--cor-oferta); }
+        .price-box { background-color: #fff; padding: 25px; border-radius: 8px; margin: 30px auto; max-width: 450px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .price-box .old-price { font-size: 1.8rem; color: #777; text-decoration: line-through; }
+        .price-box .new-price { font-size: 4.5rem; color: var(--cor-principal); font-family: 'Montserrat', sans-serif; font-weight: 900; margin: 5px 0; line-height: 1; }
+        .price-box .installments { font-size: 1.2rem; font-weight: bold; }
+        .urgency-text { color: var(--cor-oferta); font-weight: bold; margin-top: 15px; font-size: 1.1em; }
+        .payment-icons img { height: 25px; margin: 20px 5px 0 5px; }
+
+        /* FAQ */
+        #faq { background-color: var(--cor-fundo-claro); }
+        .faq-item { background: #fff; margin-bottom: 10px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border: 1px solid #eee; }
+        .faq-question { padding: 20px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 1.1em; }
+        .faq-question::after { content: '+'; font-size: 1.8em; color: var(--cor-principal); transition: transform 0.3s ease; }
+        .faq-answer { padding: 0 20px 20px; max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; border-top: 1px solid #f0f0f0; margin: 0 20px; }
+        .faq-item.active .faq-question::after { transform: rotate(45deg); }
+
+        /* FOOTER */
+        footer { text-align: center; padding: 30px 20px; margin-top: 20px; border-top: 1px solid #ddd; font-size: 0.9em; color: #777; }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2em; }
+            .section-title { font-size: 2em; }
+            #author-section, #guarantee-section, .main-product, .bonus-item { flex-direction: column; text-align: center; gap: 20px; }
+            #author-section h2 { text-align: center; }
+            .testimonial { flex-direction: column; }
+            .photo-gallery { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+            .photo-gallery { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 1.8em; }
+            .hero p { font-size: 1em; }
+            .cta-button { font-size: 1.1em; padding: 18px 35px; }
+            .price-box .new-price { font-size: 3.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero" style="background-image: url('https://i.imgur.com/cgjJlMx.jpeg');">
+        <div class="container">
+            <div class="promo-badge">ÚLTIMAS HORAS COM PREÇO DE LANÇAMENTO!</div>
+            <h1>A Liberdade de Comer um <span>Pão Delicioso</span>, Fofinho e 100% Sem Glúten</h1>
+            <p>Junte-se a <strong>+4.500 leitores satisfeitos</strong> e descubra o método à prova de erros para criar pães artesanais com casca crocante e miolo macio, mesmo que você nunca tenha cozinhado na vida.</p>
+            <a href="#oferta" class="cta-button">QUERO MEU E-BOOK COM 80% DE DESCONTO</a>
+            <span class="cta-subtext">Acesso imediato e vitalício!</span>
+        </div>
+    </header>
+
+    <main>
+        <section id="problem">
+            <div class="container">
+                <h2 class="section-title">Você se identifica com isso?</h2>
+                <p class="section-subtitle">Se você convive com a restrição ao glúten, provavelmente já passou por alguma (ou todas) destas situações frustrantes:</p>
+                <ul class="pain-points">
+                    <li>Pães sem glúten industrializados que custam uma fortuna e têm gosto de isopor.</li>
+                    <li>Receitas da internet que dão errado, resultando em pães duros, secos ou que esfarelam.</li>
+                    <li>A tristeza de ver todo mundo comendo um pão quentinho e você não poder participar.</li>
+                    <li>Gastar com farinhas caras para, no final, ter que jogar a receita inteira no lixo.</li>
+                    <li>Sentir falta de um sanduíche de verdade ou de uma simples torrada no café da manhã.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="imagine">
+            <div class="container">
+                <h2 class="section-title">Agora, imagine a sua nova realidade...</h2>
+                <p class="section-subtitle">Imagine acordar com o cheiro de pão fresquinho assando no forno. Um pão feito por você, com ingredientes que você conhece e confia, e o mais importante: delicioso e seguro.</p>
+                <ul class="imagine-list">
+                    <li>Preparar sanduíches incríveis, torradas crocantes e até mesmo pães recheados para sua família.</li>
+                    <li>Impressionar seus amigos e familiares com pães artesanais que ninguém acredita ser sem glúten.</li>
+                    <li>Ter a liberdade e a confiança para criar mais de 35 tipos de pães, de baguetes a focaccias.</li>
+                    <li>Economizar muito dinheiro parando de comprar pães industrializados caros e de baixa qualidade.</li>
+                    <li>Redescobrir o prazer de comer sem medo, com receitas que nutrem seu corpo e sua alma.</li>
+                </ul>
+                <div class="center-button">
+                    <a href="#oferta" class="cta-button">SIM, QUERO TRANSFORMAR MINHA COZINHA!</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution">
+            <div class="container">
+                <h2 class="section-title">O FIM DOS PÃES SEM GLÚTEN SEM GRAÇA</h2>
+                <p class="section-subtitle">O E-book "Pães Artesanais Sem Glúten" é a sua luz no fim do túnel. Um guia completo com o passo a passo detalhado para você dominar a panificação sem glúten de uma vez por todas.</p>
+                <div class="solution-grid">
+                    <div class="solution-card">
+                        <div class="solution-card-icon">📚</div>
+                        <h3>+35 Receitas Testadas</h3>
+                        <p>Do pão de forma ao pão de campanha. Todas as receitas foram testadas à exaustão para garantir o sucesso.</p>
+                    </div>
+                    <div class="solution-card">
+                        <div class="solution-card-icon">📸</div>
+                        <h3>Passo a Passo Visual</h3>
+                        <p>Instruções claras e fotos ilustrativas que te guiam em cada etapa do processo. À prova de erros!</p>
+                    </div>
+                    <div class="solution-card">
+                        <div class="solution-card-icon">🌾</div>
+                        <h3>Guia de Farinhas</h3>
+                        <p>Aprenda a combinar as farinhas sem glúten para obter texturas e sabores perfeitos em seus pães.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="gallery">
+            <div class="container">
+                <h2 class="section-title">Veja um Pouco do que Te Espera...</h2>
+                <p class="section-subtitle">Estas não são fotos de banco de imagens. São pães reais, feitos com as receitas que você está prestes a ter em suas mãos.</p>
+                <div class="photo-gallery">
+                    <img src="https://i.imgur.com/anu1zpL.jpeg" alt="Foto de um pão artesanal sem glúten">
+                    <img src="https://i.imgur.com/EGgbvw3.jpeg" alt="Fatia de pão com miolo macio">
+                    <img src="https://i.imgur.com/TFg6XcZ.jpeg" alt="Pão rústico dourado">
+                    <img src="https://i.imgur.com/b4j6xw7.jpeg" alt="Pães variados sem glúten">
+                    <img src="https://i.imgur.com/eM2lASx.jpeg" alt="Pão doce sem glúten">
+                    <img src="https://i.imgur.com/kODt2I2.jpeg" alt="Sanduíche feito com pão sem glúten">
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <div class="container">
+                <h2 class="section-title">Elas transformaram suas cozinhas. <br>Você é a próxima!</h2>
+                <div class="testimonial">
+                    <img src="https://i.imgur.com/yfNpZo1.jpeg" alt="Foto de perfil de cliente satisfeita" class="testimonial-profile">
+                    <div class="testimonial-content">
+                        <p>"Eu já tinha desistido de pão sem glúten... até encontrar esse e-book! As receitas da Luisa são à prova de erros! A focaccia virou a favorita aqui em casa. Minha família inteira amou a variedade. Obrigada!"</p>
+                        <strong>Mariana S. - Belo Horizonte, MG</strong>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <img src="https://i.imgur.com/tx0UQ91.jpeg" alt="Foto de perfil de cliente satisfeita" class="testimonial-profile">
+                    <div class="testimonial-content">
+                        <p>"Comprei sem muita fé, mas o resultado é incrível. Pães macios de verdade! O passo a passo é tão fácil que até eu, que sou um desastre na cozinha, consegui fazer. Super recomendo!"</p>
+                        <strong>Carla F. - São Paulo, SP</strong>
+                    </div>
+                </div>
+                 <div class="testimonial">
+                    <img src="https://i.imgur.com/YYRcopG.jpeg" alt="Foto de perfil de cliente satisfeita" class="testimonial-profile">
+                    <div class="testimonial-content">
+                        <p>"O melhor investimento que fiz para minha saúde e meu paladar. Economizei uma fortuna que gastava com pães ruins no mercado. O e-book se pagou no primeiro mês! As mais de 35 receitas são fantásticas."</p>
+                        <strong>Juliana P. - Curitiba, PR</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="value-stack-section">
+            <div class="container">
+                <h2 class="section-title">Seu Acesso Imediato Inclui <br>TUDO ISSO:</h2>
+                <div class="value-stack">
+                    <div class="main-product">
+                        <img src="https://i.imgur.com/gn1RYDv.jpeg" alt="Capa do E-book de Pães">
+                        <div>
+                            <h3>LIVRO DIGITAL PRINCIPAL: Pães Artesanais Sem Glúten (+35 Receitas)</h3>
+                            <p>O guia completo com o passo a passo detalhado, guia de farinhas, técnicas de sova e armazenamento para você fazer pães perfeitos sempre. (Valor Normal: R$ 49,90)</p>
+                        </div>
+                    </div>
+                    <hr style="border: 1px dashed #ddd; margin: 30px 0;">
+                    <div class="bonus-item">
+                        <img src="https://i.imgur.com/zpdQW1L.jpeg" alt="Capa do E-book Bônus de Molhos">
+                        <div>
+                            <h3><span class="bonus-badge">BÔNUS #1</span> E-book: Molhos e Patês para Acompanhar</h3>
+                            <p>Uma seleção especial de 15 receitas de molhos, patês e antepastos para deixar seus pães ainda mais irresistíveis. (Valor: R$ 29,90 - <strong>HOJE É GRÁTIS</strong>)</p>
+                        </div>
+                    </div>
+                    <div class="bonus-item">
+                        <img src="https://i.imgur.com/IKtP0xy.jpeg" alt="Capa do E-book Bônus de Bolos">
+                        <div>
+                            <h3><span class="bonus-badge">ESGOTADO</span> E-book: +45 Bolos Clássicos Sem Glúten</h3>
+                            <p>Aprenda a fazer +40 receitas de bolos fofinhos e deliciosos, como cenoura com chocolate, fubá e laranja. (Valor: R$ 4,90 - <strong>SOMENTE HOJE</strong>)</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="center-button">
+                    <a href="#oferta" class="cta-button">SIM, QUERO GARANTIR TUDO ISSO AGORA!</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="author-section" class="container">
+            <img src="https://i.imgur.com/8YFgujn.jpeg" alt="Foto de Luisa Pellegrini" class="author-image">
+            <div class="author-text">
+                <h2 class="section-title" style="text-align: left; font-size: 2.2em;">Sobre a Autora: Luisa Pellegrini</h2>
+                <p>Nutricionista e apaixonada por culinária inclusiva, Luisa Pellegrini passou os últimos 5 anos decifrando os segredos da panificação artesanal sem glúten. Depois de inúmeros testes, frustrações e descobertas, ela compilou seu método validado neste e-book para encurtar o seu caminho e provar que comida sem glúten pode (e deve) ser incrivelmente saborosa.</p>
+            </div>
+        </section>
+        
+        <section id="guarantee-section" class="container">
+            <img src="https://i.imgur.com/hHfgVO3.jpeg" alt="Selo de Garantia de 7 Dias" class="guarantee-seal">
+            <div class="guarantee-text">
+                <h3>Sua Compra com 100% de Risco Zero!</h3>
+                <p>Eu confio tanto no meu método que te ofereço uma <strong>Garantia Incondicional de 7 Dias</strong>. Se por qualquer motivo você não amar as receitas e os resultados, basta me enviar um único e-mail e eu devolvo 100% do seu dinheiro. Sem perguntas, sem ressentimentos. O risco é todo meu.</p>
+            </div>
+        </section>
+
+        <section id="oferta" class="container">
+            <h2 class="section-title">ACESSO IMEDIATO A TUDO POR UM PREÇO SIMBÓLICO</h2>
+            <p class="section-subtitle" style="font-weight: bold;">Atenção: Esta página sairá do ar em breve. Esta é sua única chance de garantir o acesso com o valor de lançamento.</p>
+            
+            <p><strong>Você vai levar:</strong><br>
+            ✔️ E-book Pães Artesanais Sem Glúten (+35 receitas) (<s>R$49,90</s>)<br>
+            ✔️ Bônus #1: E-book Molhos e Patês (<s>R$29,90</s>)<br>
+            ✔️ Bônus #2: E-book Top 45 Bolos Clássicos (<s>R$4,90</s>)<br>
+            ✔️ Acesso Vitalício e Atualizações Futuras</p>
+            <p>Valor total de <s>R$119,70</s>, mas hoje por:</p>
+
+            <div class="price-box">
+                <span class="old-price">De R$ 49,90</span>
+                <p>POR APENAS</p>
+                <div class="new-price">R$ 9,90</div>
+                <p class="installments">ou 2x de R$ 5,18 no cartão</p>
+            </div>
+            
+            <a href="#link-de-pagamento-final-aqui" class="cta-button" style="transform: scale(1.1); animation: pulse 1.5s infinite;">COMPRAR AGORA E RECEBER EM 2 MINUTOS</a>
+            <p class="urgency-text">Esta oferta promocional pode acabar a qualquer momento!</p>
+            <div class="payment-info">
+                <img src="https://i.imgur.com/po2TGy2.png" alt="Ícones de Cartões de Crédito, Boleto e Pix" style="max-width: 300px; margin-top: 20px;">
+                <p style="font-size: 0.9em; margin-top: 10px;">🔒 Ambiente 100% seguro. Seus dados estão protegidos.</p>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="container">
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                <div class="faq-item">
+                    <div class="faq-question">Preciso de algum ingrediente difícil ou caro?</div>
+                    <div class="faq-answer">
+                        <p>De forma alguma! Todas as receitas foram pensadas com ingredientes fáceis de encontrar em supermercados ou lojas de produtos naturais. Além disso, no e-book você encontrará um guia completo sobre as farinhas e como substituí-las.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Não tenho experiência na cozinha. Vou conseguir fazer?</div>
+                    <div class="faq-answer">
+                        <p>Sim! O e-book foi criado tanto para iniciantes quanto para quem já tem experiência. O passo a passo é super detalhado e com fotos, tornando o processo muito simples e à prova de erros.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Como vou receber o material?</div>
+                    <div class="faq-answer">
+                        <p>O acesso é 100% digital e imediato. Assim que o pagamento for confirmado, você receberá um e-mail com o link para baixar o e-book e todos os bônus. Você pode acessá-lo no seu celular, tablet ou computador para sempre.</p>
+                    </div>
+                </div>
+                 <div class="faq-item">
+                    <div class="faq-question">E se eu não gostar do e-book?</div>
+                    <div class="faq-answer">
+                        <p>Risco zero! Você tem 7 dias de garantia incondicional. Se não ficar satisfeito(a) por qualquer motivo, é só pedir o reembolso e devolveremos 100% do seu dinheiro, sem complicações.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Copyright © 2025 - Pães Artesanais Sem Glúten - Todos os direitos reservados.</p>
+            <p style="font-size: 0.8em; margin-top: 10px;">Este produto não substitui o parecer profissional. Sempre consulte um profissional da saúde para tratar de assuntos relativos à saúde.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script simples para o FAQ
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                
+                // Fecha outros itens abertos
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== parent && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.faq-answer').style.maxHeight = 0;
+                    }
+                });
+
+                // Abre ou fecha o item clicado
+                parent.classList.toggle('active');
+                const answer = item.nextElementSibling;
+                if (parent.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                } else {
+                    answer.style.maxHeight = 0;
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
